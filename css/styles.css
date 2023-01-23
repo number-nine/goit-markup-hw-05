@@ -29,6 +29,8 @@ body {
 
 }
 
+
+
 /* 4px fix */
 .block-img {
     display: block;
@@ -258,6 +260,25 @@ body {
     letter-spacing: 0.02em;
 }
 
+.navigation-item.current {
+    position: relative;
+    color: var(--action-active);
+}
+
+.navigation-item.current::after {
+    --height: 4px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: var(--height);
+    position: absolute;
+    bottom: -1px;
+    /* 0 - 1px -> include 1px of header' bottom border which shoud be overlaped by design*/
+    left: 0;
+    border-radius: 2px;
+    background-color: var(--action-active);
+
+}
 
 /* Contacts Block*/
 
