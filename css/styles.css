@@ -10,6 +10,8 @@
     --background-footer-social: rgba(255, 255, 255, 0.1);
     --success-highlight: #31D0AA;
     --subtle-text: #8E8F99;
+    --backdrop-bg: rgba(46, 47, 66, 0.4);
+    --modal-bg: #FCFCFC;
 }
 
 body {
@@ -464,7 +466,7 @@ body {
 
 .team .link-social {
     background-color: var(--primary-brand);
-    
+
 }
 
 .team .link-social:hover,
@@ -525,13 +527,14 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .hover-text {
-    margin:0;
+    margin: 0;
     padding-top: 40px;
     padding-left: 32px;
     padding-right: 32px;
     position: absolute;
-    top:100%;
+    top: 100%;
     left: 0;
     /* width: 100%; */
     height: 100%;
@@ -545,7 +548,7 @@ body {
 }
 
 .works-list .item:hover .hover-text,
-.works-list .item:focus .hover-text{
+.works-list .item:focus .hover-text {
     transform: translateY(-100%);
 }
 
@@ -691,4 +694,72 @@ body {
 
 .footer-logo {
     margin-right: 120px;
+}
+
+/* Modal window */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    padding-top: 88px;
+
+    background-color: var(--backdrop-bg);
+
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    min-width: 408px;
+    min-height: 576px;
+
+
+    background-color: var(--modal-bg);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-width: 24px;
+    min-height: 24px;
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-color);
+
+    cursor: pointer;
+    font-size: 0;
+}
+
+.modal-close:hover {
+
+    border-color: var(--action-active);
+    background-color: var(--action-active);
+}
+
+.close-icon {
+    
+    width: 8px;
+    height: 8px;
+    
+    fill: #000;
+}
+
+.modal-close:hover .close-icon {
+
+    fill: var(--accent-color);
 }
