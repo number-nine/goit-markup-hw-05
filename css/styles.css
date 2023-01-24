@@ -705,14 +705,21 @@ body {
 
     width: 100vw;
     height: 100vh;
-    padding-top: 88px;
+    /* padding-top: 88px; */
 
     background-color: var(--backdrop-bg);
 
 }
 
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+}
+
 .modal {
     position: absolute;
+    top: 88px;
     left: 50%;
     transform: translateX(-50%);
 
