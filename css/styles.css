@@ -228,6 +228,8 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .logo .logo-accent {
@@ -260,6 +262,8 @@ body {
 
     color: var(--dark);
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -314,16 +318,18 @@ body {
     text-decoration: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-item .icon-socials {
+/* .contact-item .icon-socials {
     display: inline-block;
-    /* 8px in total but 4px inline-block 4px margin  */
+    8px in total but 4px inline-block 4px margin 
     margin-right: 4px;
     vertical-align: middle;
 
     fill: currentColor;
-}
+} */
 
 .contact-item:hover,
 .contact-item:focus {
@@ -467,6 +473,8 @@ body {
     padding: 32px 16px;
 
     background-color: var(--background-primary);
+
+    
 }
 
 .socials-list {
@@ -511,6 +519,8 @@ body {
 
 .works-list .item {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
