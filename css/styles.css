@@ -146,7 +146,8 @@ body {
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -536,6 +537,9 @@ body {
     border-left: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                
 }
 
 .works-list .item:hover .caption-wrapper,
@@ -601,8 +605,7 @@ body {
 .clients {
     padding-top: 130px;
     padding-bottom: 120px;
-    /* padding-left: 156px; */
-    /* padding-right: 156px; */
+   
 }
 
 .clients .section-title {
@@ -626,7 +629,9 @@ body {
     border-radius: 4px;
     color: var(--subtle-text);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .client-link:hover,
@@ -732,6 +737,8 @@ body {
 
     background-color: var(--backdrop-bg);
 
+    opacity: 1; /*default value*/
+
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -739,23 +746,36 @@ body {
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    /* visibility: hidden; */
 
+}
+
+.is-scrollable{
+    overflow-y: hidden;
+    padding-right: 21px;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
+    
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
 
     min-width: 408px;
     min-height: 576px;
 
-
-
     background-color: var(--modal-bg);
+
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
+
 
 .modal-close {
     position: absolute;
@@ -779,7 +799,8 @@ body {
     font-size: 0;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover {
@@ -796,8 +817,3 @@ body {
 
     fill: currentColor;
 }
-
-/* .modal-close:hover .close-icon {
-
-    fill: currentColor
-} */
